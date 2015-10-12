@@ -14,9 +14,12 @@
         <script src="/assets/bootstrap/dist/js/bootstrap.js"></script>
         <script src="/assets/angular/angular.js"></script>
         <script src="/assets/summernote/dist/summernote.js"></script>
+        <script src="/assets/summernote/lang/summernote-zh-CN.js"></script>
         <script>
             $(document).ready(function() {
-                $('#summernote').summernote();
+                $('#summernote').summernote({
+                    lang: 'zh-CN'
+                });
             });
 
         </script>
