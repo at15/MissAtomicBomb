@@ -1,0 +1,10 @@
+{
+  "name": "MissAtomicBomb",
+  "version": "0.0.1",
+  "repository": "at15/MissAtomicBomb",
+  "license": "MIT",
+  "devDependencies": {
+    "tam": "latest",
+    "gulp": "latest"
+  }
+}
