@@ -12,8 +12,10 @@
 <div ng-controller="MainCtrl as main">
     <!--FIXME: content inside directive won't use  bind value -->
     <summernote>{{main.dummy}}</summernote>
-    <summernote ng-model="text"></summernote>
+    <summernote ng-model="text" config="main.options"></summernote>
     {{text}}
+    <summernote ng-model="text2" config="main.options" on-image-upload="main.imageUpload(files)"></summernote>
+    {{text2}}
 </div>
 <!--<div id="summernote">You gonna miss me when I am gone</div>-->
 
@@ -23,7 +25,7 @@
 <script src="/assets/summernote/lang/summernote-zh-CN.js"></script>
 
 <script src="/assets/angular/angular.js"></script>
-<!--<script src="/assets/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+<script src="/assets/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="/assets/angular-summernote/dist/angular-summernote.js"></script>
 <script src="/assets/javascript/bundle.js"></script>
 <script src="/assets/javascript/tmpl.js"></script>
