@@ -12,6 +12,7 @@
 
         <script src="/assets/jquery/dist/jquery.js"></script>
         <script src="/assets/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/assets/angular/angular.js"></script>
         <script src="/assets/summernote/dist/summernote.js"></script>
         <script>
             $(document).ready(function() {
