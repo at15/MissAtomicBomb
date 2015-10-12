@@ -16,7 +16,12 @@ angular.module('example', ['summernote'])
         ctrl.imageUpload = function (files) {
             console.log(files);
         };
+        ctrl.editor = {};
         ctrl.toolbarClick = function (evt) {
             console.log(evt);
+            if (g_bomb) {
+                console.log('I got bomb from tool bar click, yeah!');
+                g_bomb = false;
+            }
         }
     });

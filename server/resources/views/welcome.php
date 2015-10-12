@@ -14,7 +14,7 @@
     <summernote>{{main.dummy}}</summernote>
     <summernote ng-model="text" on-image-upload="main.imageUpload(files)"></summernote>
     {{text}}
-    <summernote ng-model="text2" config="main.options" on-toolbar-click="main.toolbarClick(evt)"></summernote>
+    <summernote ng-model="text2" config="main.options" on-toolbar-click="main.toolbarClick(evt)" editor="main.editor"></summernote>
     {{text2}}
 </div>
 <!--<div id="summernote">You gonna miss me when I am gone</div>-->
