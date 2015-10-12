@@ -27,8 +27,9 @@ $.summernote.addPlugin({
             event.data = {a: 1};
             $(event.currentTarget).data('value');
             console.log(value);
-            event.stopPropagation(); // this does not work
-            g_bomb = true;
+            event.stopPropagation(); // this wont work
+            editor._bomb = true;
+            console.log(editor);
         }
     }
 });

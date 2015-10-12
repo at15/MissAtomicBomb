@@ -19,9 +19,10 @@ angular.module('example', ['summernote'])
         ctrl.editor = {};
         ctrl.toolbarClick = function (evt) {
             console.log(evt);
-            if (g_bomb) {
-                console.log('I got bomb from tool bar click, yeah!');
-                g_bomb = false;
+            console.log(ctrl.editor);
+            if(ctrl.editor._bomb){
+                console.log('got bomb form toolbar click!');
+                ctrl.editor._bomb = false;
             }
         }
     });
