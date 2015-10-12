@@ -12,7 +12,8 @@
 <div ng-controller="MainCtrl as main">
     <!--FIXME: content inside directive won't use  bind value -->
     <summernote>{{main.dummy}}</summernote>
-    <summernote></summernote>
+    <summernote ng-model="text"></summernote>
+    {{text}}
 </div>
 <!--<div id="summernote">You gonna miss me when I am gone</div>-->
 
