@@ -25,8 +25,10 @@ angular.module('example', [])
                 events: {
                     fm: function (event, editor, layoutInfo, value) {
                         // pop up dialog and then insert a image
-                        //editor.insertImage('<img src="/upload/bomb.png"/>', 'bomb');
+                        //editor.insertImage('<img src="/upload/bomb.png"/>', 'bomb'); // TODO'': this does not work
                         $('#editor').summernote('insertImage','/upload/bomb.png','bomb.png');
+                        //layoutInfo.holder().insertImage('/upload/bomb.png', 'bomb'); // TODO: this does not work either
+                        //editor.insertImage('/upload/bomb.png', 'bomb');
                     }
                 }
             });
