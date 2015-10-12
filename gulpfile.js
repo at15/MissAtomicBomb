@@ -40,8 +40,8 @@ gulp.task('style', function () {
 gulp.task('template', function () {
     gulp.src(templateFiles)
         .pipe(ngHtml2Js({
-            moduleName: 'apm',
-            prefix: 'apm/'
+            moduleName: 'example',
+            prefix: 'example/'
         }))
         .pipe(concat('tmpl.js'))
         .pipe(gulp.dest(publicFolder + '/assets/javascript'));

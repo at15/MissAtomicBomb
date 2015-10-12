@@ -19,7 +19,7 @@
 <script src="/assets/summernote/lang/summernote-zh-CN.js"></script>
 
 <script src="/assets/angular/angular.js"></script>
-<!--<script src="/assets/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+<script src="/assets/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <!--<script src="/assets/angular-summernote/dist/angular-summernote.js"></script>-->
 <script src="/assets/javascript/bundle.js"></script>
 <script src="/assets/javascript/tmpl.js"></script>
