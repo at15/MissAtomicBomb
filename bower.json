@@ -24,6 +24,8 @@
   ],
   "dependencies": {
     "summernote": "~0.6.16",
-    "angular":"1.4.*"
+    "angular": "1.4.*",
+    "angular-bootstrap": "0.14.*",
+    "angular-summernote": "0.5.*"
   }
 }
