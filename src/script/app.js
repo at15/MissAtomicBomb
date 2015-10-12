@@ -6,9 +6,17 @@ angular.module('example', ['summernote'])
         ctrl.text = "Hi mie!";
         ctrl.text2 = "Hie mie2!";
         ctrl.options = {
-            height: 100
+            height: 100,
+            toolbar: [
+                ['groupname', ['bomb']],
+                ['g2', ['color']]
+            ]
+
         };
-        ctrl.imageUpload = function(files){
+        ctrl.imageUpload = function (files) {
             console.log(files);
+        };
+        ctrl.toolbarClick = function (evt) {
+            console.log(evt);
         }
     });

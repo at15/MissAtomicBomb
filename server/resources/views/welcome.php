@@ -12,9 +12,9 @@
 <div ng-controller="MainCtrl as main">
     <!--FIXME: content inside directive won't use  bind value -->
     <summernote>{{main.dummy}}</summernote>
-    <summernote ng-model="text" config="main.options"></summernote>
+    <summernote ng-model="text" on-image-upload="main.imageUpload(files)"></summernote>
     {{text}}
-    <summernote ng-model="text2" config="main.options" on-image-upload="main.imageUpload(files)"></summernote>
+    <summernote ng-model="text2" config="main.options" on-toolbar-click="main.toolbarClick(evt)"></summernote>
     {{text2}}
 </div>
 <!--<div id="summernote">You gonna miss me when I am gone</div>-->
