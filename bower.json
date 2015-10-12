@@ -1,0 +1,27 @@
+{
+  "name": "MissAtomicBomb",
+  "version": "0.0.1",
+  "homepage": "https://github.com/at15/MissAtomicBomb",
+  "description": "file upload manager",
+  "main": "manager.js",
+  "moduleType": [],
+  "keywords": [
+    "file",
+    "manager",
+    "upload"
+  ],
+  "authors": [
+    "at15"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "summernote": "~0.6.16"
+  }
+}
