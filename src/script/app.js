@@ -1,28 +1,46 @@
 // this is app.js
-angular.module('example', ['summernote'])
+angular.module('example', [])
     .controller('MainCtrl', function () {
         var ctrl = this;
-        ctrl.dummy = "this is a dummy message";
-        ctrl.text = "Hi mie!";
-        ctrl.text2 = "Hie mie2!";
-        ctrl.options = {
-            height: 100,
-            toolbar: [
-                ['groupname', ['bomb']],
-                ['g2', ['color']]
-            ]
 
-        };
-        ctrl.imageUpload = function (files) {
-            console.log(files);
-        };
-        ctrl.editor = {};
-        ctrl.toolbarClick = function (evt) {
-            console.log(evt);
-            console.log(ctrl.editor);
-            if(ctrl.editor._bomb){
-                console.log('got bomb form toolbar click!');
-                ctrl.editor._bomb = false;
-            }
+        initEditor();
+
+        function initEditor() {
+            // generate the plugin here
+            var tmpl = $.summernote.renderer.getTemplate();
+            $.summernote.addPlugin({
+                name: 'fm',
+                init: function (layoutInfo) {
+                    //var $note = layoutInfo.holder();
+                    //console.log($note);
+                },
+                buttons: {
+                    fm: function () {
+                        return tmpl.iconButton('fa fa-user', {
+                            event: 'fm',
+                            title: 'file manager'
+                        });
+                    }
+                },
+                events: {
+                    fm: function (event, editor, layoutInfo, value) {
+                        // pop up dialog and then insert a image
+                        //editor.insertImage('<img src="/upload/bomb.png"/>', 'bomb');
+                        $('#editor').summernote('insertImage','/upload/bomb.png','bomb.png');
+                    }
+                }
+            });
+
+            $('#editor').summernote({
+                lang: 'zh-CN',
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['table', ['table']],
+                    ['fm', ['fm']]
+                ]
+            });
         }
     });
