@@ -1,19 +1,27 @@
 /**
  * Created by gpl on 15/10/12.
  */
-function fileManagerModalCtrl($modalInstance) {
-    var ctrl = this;
+function fileManagerModalCtrl($scope, $modalInstance) {
+    var ctrl = $scope;
     ctrl.dummy = 'file manager dummy';
 
-    ctrl.upload = upload;
+    //ctrl.uploadFiles = uploadFiles;
     ctrl.ok = ok;
     ctrl.cancel = cancel;
-
     ctrl.uploading = false;
+    ctrl.fileChanged = fileChanged;
 
-    function upload() {
-        console.log('start upload!');
-        ctrl.uploading = true;
+    //console.log($('#file-input'));
+
+    //$('#file-input').on('change', uploadFiles);
+    //
+    //function uploadFiles(evt) {
+    //    var files = evt.currentTarget.files;
+    //    console.log('handle files', files);
+    //}
+
+    function fileChanged() {
+        console.log('file changed');
     }
 
     function ok() {
@@ -29,4 +37,4 @@ function fileManagerModalCtrl($modalInstance) {
 }
 
 angular.module('example')
-    .controller(fileManagerModalCtrl.name, ['$modalInstance', fileManagerModalCtrl]);
+    .controller(fileManagerModalCtrl.name, ['$scope', '$modalInstance', fileManagerModalCtrl]);

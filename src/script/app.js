@@ -28,7 +28,7 @@ function MainCtrl($uibModal) {
                     // open a dialog and let user upload
                     var modalInstance = $uibModal.open({
                         templateUrl: 'example/fileManagerModal.html',
-                        controller: 'fileManagerModalCtrl as modal',
+                        controller: 'fileManagerModalCtrl',
                         size: 'lg'
                     });
                     modalInstance.result.then(function () {

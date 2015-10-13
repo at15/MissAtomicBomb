@@ -5,7 +5,8 @@
 
     <div class="modal-body">
         <div>
-            <button class="btn btn-info" ng-click="modal.upload()" ng-disabled="modal.uploading">Upload</button>
+            <!--http://stackoverflow.com/questions/20146713/ng-change-on-input-type-file-->
+            <input type="file" id="file-input" class="btn btn-info" ng-disabled="uploading">
         </div>
         <div>
 
@@ -13,7 +14,7 @@
     </div>
 
     <div class="modal-footer">
-        <button class="btn btn-primary" ng-click="modal.ok()">Insert</button>
-        <button class="btn btn-danger" ng-click="modal.cancel()">Cancel</button>
+        <button class="btn btn-primary" ng-click="ok()">Insert</button>
+        <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
     </div>
 </div>
