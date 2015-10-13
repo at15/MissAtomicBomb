@@ -1,12 +1,19 @@
-<div class="modal-header">
-    File manager
-</div>
+<div class="fm-modal">
+    <div class="modal-header">
+        MissAtomicBomb file manager
+    </div>
 
-<div class="modal-body">
-    this is modal body
-</div>
+    <div class="modal-body">
+        <div>
+            <button class="btn btn-info" ng-click="modal.upload()" ng-disabled="modal.uploading">Upload</button>
+        </div>
+        <div>
 
-<div class="modal-footer">
-    <button class="btn btn-primary" ng-click="modal.ok()">确认</button>
-    <button class="btn btn-danger" ng-click="modal.cancel()">取消</button>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="modal.ok()">Insert</button>
+        <button class="btn btn-danger" ng-click="modal.cancel()">Cancel</button>
+    </div>
 </div>

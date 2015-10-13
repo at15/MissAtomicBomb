@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/assets/summernote/dist/summernote.css">
+    <link rel="stylesheet" href="/assets/style/bundle.css">
 </head>
 <body ng-app="example">
 <h1>editor</h1>
