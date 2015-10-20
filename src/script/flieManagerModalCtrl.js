@@ -19,26 +19,35 @@ function fileManagerModalCtrl($scope, $modalInstance) {
     }
 
     function fileChanged(files) {
-        console.log('file changed', files);
-        // put the file upload logic here
-        var form = new FormData();
-        form.append("file", files[0]);
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:8000/index.php/upload");
-        xhr.upload.addEventListener("progress", function (evt) {
-            if (evt.lengthComputable) {
-                var percent = (evt.loaded / evt.total) * 100 + "%";
-                console.log(percent);
-            }
-            else {
-                // No data to calculate on
-            }
-        }, false);
-        // File uploaded
-        xhr.addEventListener("load", function () {
-            console.log('upload finished');
-        }, false);
-        xhr.send(form);
+        // this callback also need $scope.$apply
+        $scope.$apply(function (ctrl) {
+            console.log('file changed', files);
+            ctrl.uploading = true;
+            // put the file upload logic here
+            // TODO: handle error
+            var form = new FormData();
+            form.append("file", files[0]);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://localhost:8000/index.php/upload");
+            xhr.upload.addEventListener("progress", function (evt) {
+                if (evt.lengthComputable) {
+                    var percent = (evt.loaded / evt.total) * 100 + "%";
+                    console.log(percent);
+                }
+                else {
+                    // No data to calculate on
+                }
+            }, false);
+            // File uploaded
+            xhr.addEventListener("load", function () {
+                console.log('upload finished');
+                // TODO: need $scope.$apply? yes
+                $scope.$apply(function (ctrl) {
+                    ctrl.uploading = false;
+                });
+            }, false);
+            xhr.send(form);
+        });
     }
 
     function ok() {

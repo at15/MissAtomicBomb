@@ -7,9 +7,9 @@
         <div>
             <!--http://stackoverflow.com/questions/17922557/angularjs-how-to-check-for-changes-in-file-input-fields-->
             <!--https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click()_method-->
-            <input type="file" id="file-input" ng-disabled="uploading" style="display: none"
+            <input type="file" id="file-input" style="display: none"
                    onchange="angular.element(this).scope().fileChanged(this.files)">
-            <a class="btn btn-info" id="select-btn" ng-click="selectFile()">Select some files</a>
+            <a class="btn btn-info" id="select-btn" ng-click="selectFile()" ng-disabled="uploading">Select some files</a>
         </div>
         <div>
 
