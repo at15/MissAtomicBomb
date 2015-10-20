@@ -10,15 +10,13 @@ function fileManagerModalCtrl($scope, $modalInstance) {
     ctrl.cancel = cancel;
     ctrl.uploading = false;
     ctrl.fileChanged = fileChanged;
+    ctrl.selectFile = selectFile;
 
-    //console.log($('#file-input'));
-
-    //$('#file-input').on('change', uploadFiles);
-    //
-    //function uploadFiles(evt) {
-    //    var files = evt.currentTarget.files;
-    //    console.log('handle files', files);
-    //}
+    // for not using the ugly input[type="file"]
+    function selectFile() {
+        // FIXME: should not hard code id in code
+        document.getElementById('file-input').click();
+    }
 
     function fileChanged(files) {
         console.log('file changed', files);
