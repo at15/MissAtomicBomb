@@ -25,6 +25,19 @@ function fileManagerModalCtrl($scope, $modalInstance) {
         form.append("file", files[0]);
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "http://localhost:8000/index.php/upload");
+        xhr.upload.addEventListener("progress", function (evt) {
+            if (evt.lengthComputable) {
+                var percent = (evt.loaded / evt.total) * 100 + "%";
+                console.log(percent);
+            }
+            else {
+                // No data to calculate on
+            }
+        }, false);
+        // File uploaded
+        xhr.addEventListener("load", function () {
+            console.log('upload finished');
+        }, false);
         xhr.send(form);
     }
 
