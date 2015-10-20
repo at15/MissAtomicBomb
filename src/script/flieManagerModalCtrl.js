@@ -20,6 +20,8 @@ function fileManagerModalCtrl($scope, $modalInstance) {
 
     function fileChanged(files) {
         console.log('file changed', files);
+        // put the file upload logic here
+
     }
 
     function ok() {
