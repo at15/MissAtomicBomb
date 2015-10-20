@@ -20,8 +20,8 @@ function fileManagerModalCtrl($scope, $modalInstance) {
     //    console.log('handle files', files);
     //}
 
-    function fileChanged() {
-        console.log('file changed');
+    function fileChanged(files) {
+        console.log('file changed', files);
     }
 
     function ok() {

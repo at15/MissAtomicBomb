@@ -7,7 +7,7 @@
         <div>
             <!--http://stackoverflow.com/questions/17922557/angularjs-how-to-check-for-changes-in-file-input-fields-->
             <input type="file" id="file-input" class="btn btn-info" ng-disabled="uploading"
-                   onchange="angular.element(this).scope().fileChanged()">
+                   onchange="angular.element(this).scope().fileChanged(this.files)">
         </div>
         <div>
 
