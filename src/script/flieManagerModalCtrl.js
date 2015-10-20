@@ -21,7 +21,11 @@ function fileManagerModalCtrl($scope, $modalInstance) {
     function fileChanged(files) {
         console.log('file changed', files);
         // put the file upload logic here
-
+        var form = new FormData();
+        form.append("file", files[0]);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8000/index.php/upload");
+        xhr.send(form);
     }
 
     function ok() {
