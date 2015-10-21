@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4ef36b5e05d4fc9516304e956f34e87b",
-    "content-hash": "f236759b49d756bbc9cc690a9c315e9a",
+    "hash": "63f72f7454e70cf4315bbc5ee1113873",
+    "content-hash": "ad5a5430a5003df508bc681c30b51f58",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -219,16 +219,16 @@
         },
         {
             "name": "dyweb/ring",
-            "version": "v0.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dyweb/ring.git",
-                "reference": "fdeda15e2842726541f57da0f764fbb2060ad788"
+                "reference": "03f1916e9727a704482fe915780ade6b8a72d2d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dyweb/ring/zipball/fdeda15e2842726541f57da0f764fbb2060ad788",
-                "reference": "fdeda15e2842726541f57da0f764fbb2060ad788",
+                "url": "https://api.github.com/repos/dyweb/ring/zipball/03f1916e9727a704482fe915780ade6b8a72d2d4",
+                "reference": "03f1916e9727a704482fe915780ade6b8a72d2d4",
                 "shasum": ""
             },
             "require": {
@@ -248,7 +248,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2015-10-20 16:54:40"
+            "time": "2015-10-20 17:12:08"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2955,7 +2955,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "dyweb/ring": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
