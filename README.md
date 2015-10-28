@@ -1,5 +1,7 @@
 # MissAtomicBomb
 
+[![Throughput Graph](https://graphs.waffle.io/at15/MissAtomicBomb/throughput.svg)](https://waffle.io/at15/MissAtomicBomb/metrics)
+
 A file manager for rich text editors
 
 ## Features
