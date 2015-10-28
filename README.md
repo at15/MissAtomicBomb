@@ -15,3 +15,4 @@ A file manager for rich text editors
 ## Develop
 
 - `cd server` `php artisan serve` then open `localhost:8000` to see 
+- `php artisan ide-helper:meta` to generate helper for phpstorm

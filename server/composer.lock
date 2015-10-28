@@ -223,12 +223,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dyweb/ring.git",
-                "reference": "346e33e534dbbebb363d257672b1bfc8cfdaeb91"
+                "reference": "ebc72617d9abe37a733569bc63ed079cad6aed44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dyweb/ring/zipball/346e33e534dbbebb363d257672b1bfc8cfdaeb91",
-                "reference": "346e33e534dbbebb363d257672b1bfc8cfdaeb91",
+                "url": "https://api.github.com/repos/dyweb/ring/zipball/ebc72617d9abe37a733569bc63ed079cad6aed44",
+                "reference": "ebc72617d9abe37a733569bc63ed079cad6aed44",
                 "shasum": ""
             },
             "require": {
@@ -251,7 +251,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2015-10-28 14:51:44"
+            "time": "2015-10-28 15:50:10"
         },
         {
             "name": "jakub-onderka/php-console-color",
