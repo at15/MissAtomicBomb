@@ -12,7 +12,7 @@ function fileManagerModalCtrl($scope, $modalInstance) {
     ctrl.fileChanged = fileChanged;
     ctrl.selectFile = selectFile;
 
-    // for not using the ugly input[type="file"]
+    // for not using the ugly input[type='file']
     function selectFile() {
         // FIXME: should not hard code id in code
         document.getElementById('file-input').click();
@@ -26,12 +26,13 @@ function fileManagerModalCtrl($scope, $modalInstance) {
             // put the file upload logic here
             // TODO: handle error
             var form = new FormData();
-            form.append("file", files[0]);
+            var field = 'data';
+            form.append(field, files[0]);
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost:8000/index.php/upload");
-            xhr.upload.addEventListener("progress", function (evt) {
+            xhr.open('POST', 'http://localhost:8000/index.php/upload');
+            xhr.upload.addEventListener('progress', function (evt) {
                 if (evt.lengthComputable) {
-                    var percent = (evt.loaded / evt.total) * 100 + "%";
+                    var percent = (evt.loaded / evt.total) * 100 + '%';
                     console.log(percent);
                 }
                 else {
@@ -39,7 +40,7 @@ function fileManagerModalCtrl($scope, $modalInstance) {
                 }
             }, false);
             // File uploaded
-            xhr.addEventListener("load", function () {
+            xhr.addEventListener('load', function () {
                 console.log('upload finished');
                 // TODO: need $scope.$apply? yes
                 $scope.$apply(function (ctrl) {
