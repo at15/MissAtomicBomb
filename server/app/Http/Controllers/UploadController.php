@@ -31,8 +31,7 @@ final class UploadController extends Controller
             $backend = new LocalBackend("upload");
             $uploader = new Uploader($backend, $source);
             $uploader->check();
-            // TODO: move this logic to backend
-            $backend->storeData($source);
+            $uploader->save();
             return response()->json(
                 array('file' => $source->getInfo())
             );

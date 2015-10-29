@@ -9,6 +9,7 @@
     "gulp-watch": "latest",
     "gulp-sass": "latest",
     "gulp-ng-html2js":"latest",
+    "gulp-traceur":"latest",
     "lodash":"latest"
   }
 }

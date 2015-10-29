@@ -4,6 +4,7 @@
 
 var _ = require('lodash');
 var gulp = require('gulp');
+var traceur = require('gulp-traceur');
 var concat = require('gulp-concat');
 var watch = require('gulp-watch');
 var sass = require('gulp-sass');
@@ -26,6 +27,7 @@ var templateFiles = [
 ];
 gulp.task('client-script', function () {
     gulp.src(jsFiles)
+        .pipe(traceur())
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest(publicFolder + '/assets/javascript'));
 });
